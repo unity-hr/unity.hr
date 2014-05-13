@@ -1,9 +1,65 @@
+$top: $sub;
+
 .intro {
   position: relative;
+  height: 100%;
+  background-image: image-url('intro/characters.png'), image-url('intro/typography.png');
+  background-position: -5% $top, -5% $top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  transition: .5s all;
 
-  &-item {
+  &.is-monkee {
+    background-position: -5% $top, -5% $top;
+  }
+
+  &.is-jakov {
+    background-position: 50% $top, 50% $top;
+  }
+
+  &.is-matija {
+    background-position: 85% $top, 85% $top;
+  }
+
+  &.is-ante {
+    background-position: 115% $top, 115% $top;
+  }
+
+  &-nav {
     position: absolute;
-    top: $suh;
+    bottom: $sub * 2;
     left: $sub * 2;
+    z-index: 30;
+    line-height: 0;
+
+    &-item {
+      margin: 0 $suh/2;
+
+      a {
+        display: inline-block;
+        padding: 4px;
+        background-color: rgba(#fff, .75);
+        border: 3px solid transparent;
+        border-radius: 50%;
+        transition: .2s all;
+
+        &:hover,
+        &:focus {
+          border-color: rgba($color-primary, .25);
+        }
+      }
+
+      &.is-active {
+        a {
+          border-color: $color-primary;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
   }
 }
