@@ -1,0 +1,39 @@
+// A clearfixing shortuct. Assumes a Sass library,
+// like Compass or Bourbon.
+
+.cf {
+  @include clearfix;
+}
+
+// When applied on an element, it will float its
+// immediate descendants and clearfix itself.
+
+// float left
+
+.fl {
+  @extend .cf;
+  > * {
+    float: left;
+  }
+}
+
+// float right
+
+.fr {
+  @extend .cf;
+  > * {
+    float: right;
+  }
+}
+
+// float diverge
+
+.fd {
+  > *:first-child {
+    float: left;
+  }
+
+  > *:last-child {
+    float: right;
+  }
+}

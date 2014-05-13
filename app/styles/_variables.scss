@@ -1,0 +1,39 @@
+$font-family-base: "Neue Haas Grotesk W01 Disp", "helvetica neue", helvetica, arial, sans-serif;
+
+$font-size-base: 16px;
+$line-height-base: 24px;
+
+$sub: $line-height-base;
+$suh: $line-height-base / 2;
+
+$color-primary: #4368dc;
+
+$network-colors: (
+  facebook:    #3b5998,
+  twitter:     #00aced,
+  google-plus: #da2713,
+  vimeo:       #1bb7ea,
+  youtube:     #e14d40,
+  github:      #000000,
+  gmail:       #d72c2c,
+  linked-in:   #0274b3,
+  instagram:   #2c6e8e,
+  vine:        #00a478,
+  dribbble:    #df4c85,
+  behance:     #000000,
+  flickr-blue: #1e65d9,
+  flickr-pink: #fc1486,
+  soundcloud:  #ff631c
+);
+
+// Small screen / tablet
+$screen-sm-min:              768px;
+// Medium screen / desktop
+$screen-md-min:              992px;
+// Large screen / wide desktop
+$screen-lg-min:              1200px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);

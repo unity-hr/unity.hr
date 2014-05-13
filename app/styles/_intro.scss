@@ -1,0 +1,9 @@
+.intro {
+  position: relative;
+
+  &-item {
+    position: absolute;
+    top: $suh;
+    left: $sub * 2;
+  }
+}

@@ -1,0 +1,9 @@
+.navigation {
+  @include font-size(18px);
+  margin-top: $suh;
+  font-weight: 700;
+
+  a {
+    padding: $suh;
+  }
+}

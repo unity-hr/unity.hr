@@ -1,0 +1,28 @@
+@mixin font-size($font-size, $line-height: 1) {
+  font-size: $font-size;
+  line-height: ($line-height * $line-height-base) / $font-size;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin vertically-center {
+  height: 100%;
+
+  &::before {
+    content: "";
+    height: 100%;
+    margin-left: -0.25em;
+  }
+
+  &::before,
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

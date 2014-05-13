@@ -1,0 +1,8 @@
+.brand {
+  @include font-size(24px, 1.95);
+  margin-bottom: 0;
+
+  a {
+    color: #000;
+  }
+}

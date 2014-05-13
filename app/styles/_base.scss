@@ -1,0 +1,20 @@
+body {
+  @include font-size($font-size-base);
+  margin: 0;
+  font-family: $font-family-base;
+  font-weight: 500;
+}
+
+a {
+  color: rgba(#000, .5);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+
+img {
+  display: inline-block;
+}
