@@ -7,7 +7,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('views', function () {
-  return gulp.src('app/*.jade')
+  return gulp.src(['app/*.jade', '!app/layout.jade'])
     .pipe($.jade({pretty: true}))
     .pipe(gulp.dest('.tmp'));
 });
