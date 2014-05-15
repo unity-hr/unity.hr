@@ -1,7 +1,7 @@
 .page-about {
   padding-top: $sub * 3;
 
-  @media (min-width: $screen-xs-min) {
+  @media (min-width: 768px) {
     @include vertically-center;
     padding-top: 0;
   }
@@ -10,7 +10,7 @@
     padding-left: $sub;
     padding-right: $sub;
 
-    @media (min-width: $screen-xs-min) {
+    @media (min-width: 768px) {
       border-right: 1px solid rgba(black, .15);
     }
 
@@ -18,7 +18,7 @@
       padding: $sub;
       border-bottom: 1px solid rgba(black, .15);
 
-      @media (min-width: $screen-xs-min) {
+      @media (min-width: 768px) {
         padding: 0;
         border-bottom: none;
       }
@@ -47,7 +47,7 @@
   }
 
   $heading-sizes: (
-    $screen-xs-min: (font-size: 60px, line-height: 3),
+    $screen-xs-min: (font-size: 60px, line-height: 2.5),
     $screen-sm-min: (font-size: 80px, line-height: 3.5),
     $screen-md-min: (font-size: 100px, line-height: 4),
     $screen-lg-min: (font-size: 120px, line-height: 5),

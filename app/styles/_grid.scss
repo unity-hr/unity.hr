@@ -13,7 +13,7 @@
   padding-left: $suh;
   padding-right: $suh;
 
-  @media(min-width: $screen-xs-min) {
+  @media(min-width: 768px) {
     float: left;
   }
 
@@ -21,7 +21,7 @@
     &-#{$i} {
       @extend .col;
 
-      @media(min-width: $screen-xs-min) {
+      @media(min-width: 768px) {
         width: (100%/$i);
       }
     }
