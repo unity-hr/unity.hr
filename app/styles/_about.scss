@@ -1,0 +1,140 @@
+.page-about {
+  padding-top: $sub * 3;
+
+  @media (min-width: $screen-xs-min) {
+    @include vertically-center;
+    padding-top: 0;
+  }
+
+  .col {
+    padding-left: $sub;
+    padding-right: $sub;
+
+    @media (min-width: $screen-xs-min) {
+      border-right: 1px solid rgba(black, .15);
+    }
+
+    .inner {
+      padding: $sub;
+      border-bottom: 1px solid rgba(black, .15);
+
+      @media (min-width: $screen-xs-min) {
+        padding: 0;
+        border-bottom: none;
+      }
+
+      @media (min-width: $screen-md-min) {
+        padding-left: $sub * 2;
+        padding-right: $sub * 2;
+      }
+    }
+
+    &:last-child {
+      border: none;
+
+      .inner {
+        border: none;
+      }
+    }
+  }
+
+  h2, p {
+    margin-bottom: $suh;
+
+    @media (min-width: $screen-xs-min) {
+      margin-bottom: $sub;
+    }
+  }
+
+  $heading-sizes: (
+    $screen-xs-min: (font-size: 60px, line-height: 3),
+    $screen-sm-min: (font-size: 80px, line-height: 3.5),
+    $screen-md-min: (font-size: 100px, line-height: 4),
+    $screen-lg-min: (font-size: 120px, line-height: 5),
+  );
+
+  h2 {
+    @include font-size(40px , 2);
+
+    @each $viewport, $size in $heading-sizes {
+      $font-size: map-get($size, "font-size");
+      $line-height: map-get($size, "line-height");
+
+      @media (min-width: $viewport) {
+        @include font-size($font-size, $line-height);
+      }
+    }
+  }
+
+  $container-heights: (
+    $screen-xs-min: $sub * 7,
+    $screen-sm-min: $sub * 9,
+    $screen-md-min: $sub * 9,
+    $screen-lg-min: $sub * 11
+  );
+
+  .img-container {
+    margin-bottom: $suh;
+    height: $sub * 5;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @each $viewport, $height in $container-heights {
+      @media (min-width: $viewport) {
+        height: $height;
+      }
+    }
+  }
+
+  $image-dimensions: (
+    ui:  (width: 150px, height: 180px),
+    ux:  (width: 210px, height: 90px),
+    dev: (width: 300px, height: 220px)
+  );
+
+  $image-increments: (
+    $screen-xs-min: .4,
+    $screen-sm-min: .6,
+    $screen-md-min: .6,
+    $screen-lg-min: .8
+  );
+
+  section {
+    h2, p {
+      opacity: 0;
+      transform: translateY(#{$sub * 2});
+      transition: .4s all;
+    }
+
+    &.is-loaded {
+      h2, p {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  }
+
+  @each $section, $dimension in $image-dimensions {
+    $width: map-get($dimension, "width");
+    $height: map-get($dimension, "height");
+
+    .#{$section} {
+      &.is-loaded {
+        .img-container {
+          background-image: image-url("about/#{$section}1.gif");
+          background-size: ($width * .5) ($height * .5);
+
+          &:hover {
+            background-image: image-url("about/#{$section}2.gif");
+          }
+
+          @each $viewport, $increment in $image-increments {
+            @media (min-width: $viewport) {
+              background-size: ($width * $increment) ($height * $increment);
+            }
+          }
+        }
+      }
+    }
+  }
+}

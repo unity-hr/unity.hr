@@ -1,0 +1,29 @@
+.container {
+  @media (min-width: $screen-sm-min) {
+    padding-left: $sub * 2;
+    padding-right: $sub * 2;
+  }
+}
+
+.row {
+  @include clearfix;
+}
+
+.col {
+  padding-left: $suh;
+  padding-right: $suh;
+
+  @media(min-width: $screen-xs-min) {
+    float: left;
+  }
+
+  @for $i from 1 through 6 {
+    &-#{$i} {
+      @extend .col;
+
+      @media(min-width: $screen-xs-min) {
+        width: (100%/$i);
+      }
+    }
+  }
+}

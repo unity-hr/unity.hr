@@ -1,0 +1,11 @@
+.vertically-center {
+  @include vertically-center;
+}
+
+.text {
+  @each $dir in left, center, right {
+    &-#{$dir} {
+      text-align: $dir;
+    }
+  }
+}

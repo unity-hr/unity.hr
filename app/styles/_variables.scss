@@ -1,7 +1,7 @@
 $font-family-base: "Neue Haas Grotesk W01 Disp", "helvetica neue", helvetica, arial, sans-serif;
 
-$font-size-base: 16px;
-$line-height-base: 24px;
+$font-size-base: 14px;
+$line-height-base: 20px;
 
 $sub: $line-height-base;
 $suh: $line-height-base / 2;
@@ -26,6 +26,8 @@ $network-colors: (
   soundcloud:  #ff631c
 );
 
+// Extra small screen / phone
+$screen-xs-min:              480px;
 // Small screen / tablet
 $screen-sm-min:              768px;
 // Medium screen / desktop
