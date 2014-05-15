@@ -3,6 +3,10 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: $sub;
+  padding: $suh;
   z-index: 20;
+
+  @media (min-width: $screen-sm-min) {
+    padding: $sub;
+  }
 }

@@ -124,15 +124,21 @@
           background-image: image-url("about/#{$section}1.gif");
           background-size: ($width * .5) ($height * .5);
 
-          &:hover {
-            background-image: image-url("about/#{$section}2.gif");
-          }
-
           @each $viewport, $increment in $image-increments {
             @media (min-width: $viewport) {
               background-size: ($width * $increment) ($height * $increment);
             }
           }
+        }
+      }
+
+      &:hover {
+        .img-container {
+          // background-image: image-url("about/#{$section}2.gif");
+        }
+
+        h2, p {
+          transform: translateY(#{-$suh});
         }
       }
     }

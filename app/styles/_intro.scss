@@ -1,39 +1,74 @@
 $top: $sub;
 
 .intro {
-  position: relative;
-  height: 100%;
-  background-image: image-url('intro/characters.png'), image-url('intro/typography.png');
-  background-position: -5% $top, -5% $top;
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
-  transition: .5s all;
+  height: 90%;
+  background-image: image-url("intro.svg");
+  background-repeat: no-repeat;
+  background-size: auto 95%;
+  transition: 1.2s all;
 
-  &.is-monkee {
-    background-position: -5% $top, -5% $top;
+  background-position: -1% $top;
+
+  &.is-monkee { background-position: -1% $top; }
+  &.is-jakov  { background-position: 48% $top; }
+  &.is-matija { background-position: 75% $top; }
+  &.is-ante   { background-position: 103% $top; }
+
+  @media (min-width: $screen-xs-min) {
+    background-position: -5% $top;
+
+    &.is-monkee { background-position: -5% $top; }
+    &.is-jakov  { background-position: 40% $top; }
+    &.is-matija { background-position: 88% $top; }
+    &.is-ante   { background-position: 120% $top; }
   }
 
-  &.is-jakov {
-    background-position: 50% $top, 50% $top;
+  @media (min-width: $screen-sm-min) {
+    background-position: -2% $top;
+
+    &.is-monkee { background-position: -2% $top; }
+    &.is-jakov  { background-position: 50% $top; }
+    &.is-matija { background-position: 77% $top; }
+    &.is-ante   { background-position: 103% $top; }
   }
 
-  &.is-matija {
-    background-position: 85% $top, 85% $top;
+  @media (min-width: $screen-md-min) {
+    background-position: -4% $top;
+
+    &.is-monkee { background-position: -4% $top; }
+    &.is-jakov  { background-position: 48% $top; }
+    &.is-matija { background-position: 80% $top; }
+    &.is-ante   { background-position: 105% $top; }
   }
 
-  &.is-ante {
-    background-position: 115% $top, 115% $top;
+  @media (min-width: $screen-lg-min) {
+    background-position: -5% $top;
+
+    &.is-monkee { background-position: -5% $top; }
+    &.is-jakov  { background-position: 52% $top; }
+    &.is-matija { background-position: 92% $top; }
+    &.is-ante   { background-position: 120% $top; }
+  }
+
+  .no-svg & {
+    background-image: image-url('intro.png');
   }
 
   &-nav {
     position: absolute;
-    bottom: $sub * 2;
-    left: $sub * 2;
+    bottom: $sub;
+    left: $sub;
+    right: $sub;
     z-index: 30;
     line-height: 0;
+    text-align: center;
+
+    @media (min-width: $screen-xs-min) {
+      text-align: left;
+    }
 
     &-item {
-      margin: 0 $suh/2;
+      display: inline-block;
 
       a {
         display: inline-block;

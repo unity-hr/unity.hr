@@ -2,6 +2,12 @@
 @import "functions";
 @import "mixins";
 
+@import "config/off-canvas";
+
+// bower:scss
+@import "../../bower_components/off-canvas/src/styles/off-canvas.scss";
+// endbower
+
 @import "base";
 
 @import "about";
@@ -13,4 +19,5 @@
 @import "intro";
 @import "list";
 @import "navigation";
+@import "off-canvas";
 @import "page";

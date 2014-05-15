@@ -1,9 +1,15 @@
 .navigation {
   @include font-size(18px);
-  margin-top: $suh;
   font-weight: 700;
 
-  a {
-    padding: $suh;
+  li {
+    @media (min-width: $screen-xs-min) {
+      float: left;
+    }
+
+    a {
+      display: inline-block;
+      padding: $suh;
+    }
   }
 }

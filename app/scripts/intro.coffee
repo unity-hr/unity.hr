@@ -17,7 +17,7 @@ do ($ = jQuery) ->
       @activateNavigation()
 
     activateNavigation: ->
-      @navigation.on 'click', 'a', (event) =>
+      @navigation.on 'click touchstart', 'a', (event) =>
         event.preventDefault()
         item      = $(event.currentTarget)
         character = item.data('character')
