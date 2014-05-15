@@ -66,6 +66,12 @@
     }
   }
 
+  p {
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   $container-heights: (
     $screen-xs-min: $sub * 7,
     $screen-sm-min: $sub * 9,
