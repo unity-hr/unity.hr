@@ -1,11 +1,13 @@
 .#{$off-canvas-namespace} {
   &-menu {
     @include font-size(18px);
+    padding-top: $suh;
+    padding-bottom: $suh;
     background-color: $color-primary;
     font-weight: 700;
 
     a {
-      display: inline-block;
+      display: block;
       padding: $suh;
       color: #fff;
     }
