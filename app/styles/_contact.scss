@@ -1,0 +1,17 @@
+.page-contact {
+  h2 {
+    @include font-size(30px, 1.5);
+
+    @media (min-width: $screen-xs-min) {
+      @include font-size(60px, 2);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      @include font-size(80px, 3);
+    }
+  }
+
+  p {
+    @include font-size(16px);
+  }
+}
