@@ -44,7 +44,7 @@ html.no-js
           a(href='./') Unity
 
         nav.navigation(role='navigation')
-          ul.list-unstyled.fl.off-canvas-hide
+          ul.list-unstyled.fl.off-canvas-hidden
             li: a(href='./') Home
             li: a(href='about.html') About us
             li: a(href='contact.html') Contact
@@ -69,9 +69,11 @@ html.no-js
     // build:js scripts/vendor.js
     // bower:js
     script(src='../bower_components/jquery/dist/jquery.js')
-    script(src='../bower_components/modernizr/modernizr.js')
     script(src='../bower_components/fastclick/lib/fastclick.js')
-    script(src='../bower_components/off-canvas/dist/off-canvas.js')
+    script(src='../bower_components/classie/classie.js')
+    script(src='../bower_components/eventie/eventie.js')
+    script(src='../bower_components/lodash/dist/lodash.compat.js')
+    script(src='../bower_components/off-canvas/scripts/off-canvas.js')
     // endbower
     // endbuild
 

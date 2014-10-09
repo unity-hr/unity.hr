@@ -5,7 +5,7 @@
     "modernizr": "~2.8.1",
     "jquery": "~1.11.0",
     "fastclick": "~1.0.1",
-    "off-canvas": "unity-hr/off-canvas#0.0.2",
+    "off-canvas": "*",
     "normalize-css": "~3.0.1"
   },
   "overrides": {}
